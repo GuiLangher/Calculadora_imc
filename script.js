@@ -8,6 +8,7 @@ form.addEventListener('submit', function(event) {
 
     const bmi = (weight / (height * height)).toFixed(2);
 
+if (!isNaN(bmi)) {
     const value = document.getElementById('value');
     let description = '';
 
@@ -33,4 +34,5 @@ form.addEventListener('submit', function(event) {
 
     value.textContent = bmi.replace ('.' , ',');
     document.getElementById('description').textContent = description;
+    }
 });
